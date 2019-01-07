@@ -5,11 +5,15 @@ import { Component } from '@angular/core';
     templateUrl: './server.component.html',
     styles: [`
         p {
-            color: red;
             font-weight: bold;
         }
     `]
 })
 export class ServerComponent {
+    serverID: number = 50;
+    serverStatus: string = Math.random() > 0.5 ? 'online' : 'offline';
 
+    setBgColor = () => {
+        return this.serverStatus === 'online' ? 'green' : 'red';
+    }
 }
