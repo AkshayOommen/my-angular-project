@@ -10,7 +10,7 @@
 
 <p *ngIf="false; else elseBlock">This is the if block</p>
 <ng-template #elseBlock>
-    <p appBetterHighlight>This is the else block</p>
+    <p appBetterHighlight [defaultColor]="'red'" [highlightColor]="'green'">This is the else block</p>
 </ng-template>
 <app-server></app-server>
 <app-server></app-server>
